@@ -5,7 +5,6 @@ int bluePin = 9;
 int r, g, b;
 
 #define fade 10
-//#define reverseForCommonAnode
 
 void setup() {
   pinMode(redPin, OUTPUT);
@@ -55,13 +54,6 @@ void loop() {
  
 
 void changeColour( int r, int g, int b) {
-//
-//  #ifdef reverseForCommonAnode
-//    r = 255 - r;
-//    g = 255 - g;
-//    b = 255 - b;
-//  #endif
-
   analogWrite(redPin, r);
   analogWrite(greenPin, g);
   analogWrite(bluePin, b); 
